@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Navbar from './Navbar';
+import Home from './Home';
 
 function App() {
+  const title = 'Welcome to the project';
+  console.log('title', { title });
+  var mysite = "https://ashok-rai.com.np/"
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <div className="conent">
+        <Home />
+        
+        <h4>{title}</h4>
+        <p>{Math.random() * 100}</p>
+        <a href={mysite} target="_blank" rel="noreferrer">My Site</a>
+      </div>
     </div>
   );
 }
